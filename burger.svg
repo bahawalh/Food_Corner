@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
-<rect width="600" height="400" fill="#f6e0bd"/><path d="M120 180 Q300 65 480 180Z" fill="#d68910"/>
-<rect x="120" y="180" width="360" height="38" rx="12" fill="#7b2d26"/><rect x="120" y="220" width="360" height="35" rx="8" fill="#27ae60"/>
-<rect x="120" y="255" width="360" height="32" rx="8" fill="#f1c40f"/><rect x="120" y="287" width="360" height="35" rx="10" fill="#a04000"/>
-<text x="300" y="370" text-anchor="middle" font-size="36" font-family="Arial" fill="#7b2d26">BURGER</text></svg>
