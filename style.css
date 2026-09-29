@@ -1,0 +1,295 @@
+/* =========================
+   FOOD CORNER - LAB 3 CSS
+   External stylesheet
+   ========================= */
+
+/* Element selector + inheritance */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+  background-color: #fff8ef;
+  line-height: 1.6;
+}
+
+/* Grouping selector */
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+/* ID selector */
+#main-header {
+  background-color: #7b2d26;
+  color: white;
+  padding: 18px 7%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Descendant selector */
+#main-header nav a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 12px;
+  margin-left: 5px;
+  border-radius: 6px;
+}
+
+/* Attribute selector */
+input[type="email"] {
+  border-left: 4px solid #e67e22;
+}
+
+/* Pseudo-class */
+#main-header nav a:hover {
+  background-color: #f39c12;
+  color: #3b1d18;
+}
+
+/* Class selector */
+.container {
+  width: 86%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.hero {
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 7%;
+  box-sizing: border-box;
+  background-image: url("images/food-pattern.svg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 260px;
+  background-color: #fce9d7;
+}
+
+.hero-content {
+  background-color: rgba(255,255,255,0.94);
+  width: 700px;
+  max-width: 100%;
+  min-width: 280px;
+  height: auto;
+  min-height: 220px;
+  max-height: 500px;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0 0 10px;
+}
+
+/* Pseudo-elements */
+.section-title::before {
+  content: "🍴 ";
+}
+.section-title::after {
+  content: " 🍴";
+}
+
+.btn {
+  display: inline-block;
+  background-color: #e67e22;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 7px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #c85f08;
+}
+
+/* Specificity demonstration:
+   .food-card { ... } is overridden by .menu-grid .food-card */
+.food-card {
+  background-color: white;
+}
+.menu-grid .food-card {
+  background-color: #fffdf9;
+}
+
+/* Source-order/cascade demonstration:
+   Both selectors have equal specificity; later rule wins. */
+.cascade-demo {
+  border: 3px solid #2980b9;
+}
+.cascade-demo {
+  border-color: #8e44ad;
+}
+
+/* Food card layout and box model */
+.menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.food-card {
+  width: 250px;
+  height: 410px;
+  padding: 16px;
+  margin: 0;
+  border: 2px solid #ead7c5;
+  border-radius: 14px;
+  box-shadow: 0 5px 16px rgba(0,0,0,0.10);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* :first-child requirement */
+.menu-grid .food-card:first-child {
+  border-color: #e67e22;
+  transform: translateY(-6px);
+  background-color: #fff1df;
+}
+
+.food-card img {
+  width: 100%;
+  height: 155px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.food-card h3 {
+  margin: 12px 0 4px;
+  color: #7b2d26;
+}
+
+.food-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.price {
+  font-weight: bold;
+  color: #c0392b;
+  margin-top: auto !important;
+  margin-bottom: 10px !important;
+}
+
+/* Inline CSS is also used in HTML on selected elements. */
+
+section {
+  padding: 65px 0;
+}
+
+.about-box {
+  width: 80%;
+  min-width: 260px;
+  max-width: 850px;
+  min-height: 170px;
+  max-height: 350px;
+  padding: 25px;
+  margin: auto;
+  border: 2px solid #e8cdb4;
+  border-radius: 12px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  width: 90%;
+  max-width: 650px;
+  margin: auto;
+  padding: 25px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 16px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 11px;
+  margin-top: 5px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+footer {
+  text-align: center;
+  background-color: #3b1d18;
+  color: white;
+  padding: 22px;
+}
+
+/* Margin collapsing demonstration */
+.collapse-one {
+  margin-bottom: 40px;
+  background-color: #f9d5b5;
+  padding: 15px;
+}
+.collapse-two {
+  margin-top: 30px;
+  background-color: #f6b98a;
+  padding: 15px;
+}
+
+/* Overflow demonstrations */
+.overflow-box {
+  width: 320px;
+  height: 120px;
+  border: 2px solid #7b2d26;
+  padding: 10px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  background: #fff;
+}
+.overflow-visible { overflow: visible; }
+.overflow-hidden { overflow: hidden; }
+.overflow-scroll { overflow: scroll; }
+
+/* Display properties */
+.display-block { display: block; }
+.display-inline { display: inline; }
+.display-inline-block { display: inline-block; }
+.display-none { display: none; }
+
+/* Responsive adjustment */
+@media (max-width: 850px) {
+  .food-card {
+    width: calc(50% - 11px);
+  }
+}
+@media (max-width: 600px) {
+  #main-header {
+    position: static;
+  }
+  #main-header nav a {
+    margin: 3px 0;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  .food-card {
+    width: 100%;
+  }
+}

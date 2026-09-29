@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Concepts Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Internal CSS */
+    .internal-demo {
+      background-color: #f5e6ff;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header id="main-header">
+    <div class="container">
+      <strong>Food Corner — CSS Concepts Demo</strong>
+      <nav style="float:right;"><a href="index.html">Home</a></nav>
+      <div style="clear:both;"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1 class="section-title">Selectors & CSS Types</h1>
+
+      <p class="internal-demo">This paragraph is styled with internal CSS.</p>
+
+      <p style="background-color:#ffe0b2; padding:15px; border-radius:8px;">
+        This paragraph uses inline CSS.
+      </p>
+
+      <p class="cascade-demo" style="padding:15px;">
+        This uses the external stylesheet and demonstrates cascade/source order.
+      </p>
+
+      <h2>Required selectors</h2>
+      <ul>
+        <li><b>Element selector:</b> body, h1, h2, h3</li>
+        <li><b>Class selector:</b> .container, .food-card, .btn</li>
+        <li><b>ID selector:</b> #main-header</li>
+        <li><b>Attribute selector:</b> input[type="email"]</li>
+        <li><b>Grouping selector:</b> h1, h2, h3</li>
+        <li><b>Descendant selector:</b> #main-header nav a</li>
+      </ul>
+
+      <h2>Pseudo-classes</h2>
+      <p>Hover over the navigation links or buttons to see :hover.</p>
+      <div class="menu-grid">
+        <article class="food-card">
+          <img src="images/pizza.svg" alt="Pizza">
+          <h3>First Card</h3>
+          <p>The first card has a different style because of :first-child.</p>
+          <a class="btn" href="#">Hover Me</a>
+        </article>
+        <article class="food-card">
+          <img src="images/burger.svg" alt="Burger">
+          <h3>Normal Card</h3>
+          <p>This card shows the normal card styling.</p>
+          <a class="btn" href="#">Hover Me</a>
+        </article>
+      </div>
+
+      <h2>Inheritance & Specificity</h2>
+      <p>Body sets the common font, color and line-height. Child elements inherit these properties unless a more specific rule overrides them.</p>
+      <p id="special-heading" class="special-heading">The ID selector is more specific than the class selector, so its color is applied.</p>
+
+      <a class="btn" href="index.html">Back to Food Corner</a>
+    </section>
+  </main>
+</body>
+</html>

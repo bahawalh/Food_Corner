@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Corner | Lab 3 CSS</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS requirement -->
+  <style>
+    .welcome-note {
+      color: #8e44ad;
+      font-style: italic;
+    }
+
+    /* Specificity example: ID wins over class */
+    #special-heading {
+      color: #c0392b;
+    }
+    .special-heading {
+      color: #2980b9;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="main-header">
+    <div class="container">
+      <strong style="font-size: 24px;">Food Corner</strong>
+      <nav style="float: right;">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div style="clear: both;"></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 id="special-heading" class="special-heading">Welcome to Food Corner</h1>
+        <p class="welcome-note">Fresh flavors, friendly prices, and delicious food made for everyone.</p>
+        <a class="btn" href="#menu">Explore Menu</a>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="container">
+        <h2 class="section-title">Our Menu</h2>
+        <p>Choose from our four featured dishes.</p>
+
+        <div class="menu-grid">
+          <article class="food-card">
+            <img src="images/pizza.svg" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>Cheesy pizza topped with fresh vegetables and herbs.</p>
+            <p class="price">Rs. 850</p>
+            <a class="btn" href="#contact">Order Now</a>
+          </article>
+
+          <article class="food-card">
+            <img src="images/burger.svg" alt="Burger">
+            <h3>Burger</h3>
+            <p>Juicy burger with crisp lettuce, tomato and our special sauce.</p>
+            <p class="price">Rs. 550</p>
+            <a class="btn" href="#contact">Order Now</a>
+          </article>
+
+          <article class="food-card">
+            <img src="images/sandwich.svg" alt="Sandwich">
+            <h3>Sandwich</h3>
+            <p>Toasted sandwich filled with fresh vegetables and creamy sauce.</p>
+            <p class="price">Rs. 450</p>
+            <a class="btn" href="#contact">Order Now</a>
+          </article>
+
+          <article class="food-card">
+            <img src="images/pasta.svg" alt="Pasta">
+            <h3>Pasta</h3>
+            <p>Classic pasta tossed in a rich tomato and herb sauce.</p>
+            <p class="price">Rs. 700</p>
+            <a class="btn" href="#contact">Order Now</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Food Corner</h2>
+        <div class="about-box">
+          <p>Food Corner is a fictional neighborhood restaurant created for the Web Technologies Lab 3. We focus on simple, tasty meals served in a welcoming environment. This page demonstrates HTML structure and the CSS concepts required by the lab task.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="css-demo">
+      <div class="container">
+        <h2 class="section-title">CSS Concepts</h2>
+        <p class="cascade-demo" style="padding: 15px;">
+          This box demonstrates cascade/source order and specificity.
+          The two equal-specificity border rules are in the external stylesheet;
+          the later rule wins.
+        </p>
+        <p class="display-none">This element is hidden using display: none.</p>
+        <a class="btn" href="css-concepts.html">Open CSS Concepts Demo</a>
+        <a class="btn" href="box-model.html">Open Box Model Demo</a>
+        <a class="btn" href="overflow-display.html">Open Overflow & Display Demo</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <form class="contact-form" action="#" method="post">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" placeholder="Enter your name" required>
+
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="Enter your email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Write your message"></textarea>
+
+          <button class="btn" type="submit" style="margin-top: 15px;">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Food Corner
+  </footer>
+</body>
+</html>

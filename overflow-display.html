@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overflow & Display Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="main-header">
+    <div class="container">
+      <strong>Food Corner — Overflow & Display Demo</strong>
+      <nav style="float:right;"><a href="index.html">Home</a></nav>
+      <div style="clear:both;"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1 class="section-title">Overflow</h1>
+
+      <h3>overflow: visible;</h3>
+      <div class="overflow-box overflow-visible">
+        This text is intentionally longer than the box height. With overflow visible, content can extend outside the box. This demonstrates the default visible behavior.
+      </div>
+
+      <h3>overflow: hidden;</h3>
+      <div class="overflow-box overflow-hidden">
+        This text is intentionally longer than the box height. With overflow hidden, the extra content is clipped and cannot be seen outside the box.
+      </div>
+
+      <h3>overflow: scroll;</h3>
+      <div class="overflow-box overflow-scroll">
+        This text is intentionally longer than the box height. With overflow scroll, scrollbars are available so the user can access content that does not fit inside the fixed-height box.
+      </div>
+
+      <h1 class="section-title">Display Properties</h1>
+
+      <p class="display-block">display: block — occupies its own line.</p>
+      <span class="display-inline">display: inline</span>
+      <span class="display-inline"> — another inline element.</span>
+      <div>
+        <a class="btn display-inline-block" href="#">display: inline-block</a>
+        <a class="btn display-inline-block" href="#">Another inline-block</a>
+      </div>
+
+      <p class="display-none">You cannot see this text because display: none removes it from the page layout.</p>
+
+      <br>
+      <a class="btn" href="index.html">Back to Food Corner</a>
+    </section>
+  </main>
+</body>
+</html>

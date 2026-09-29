@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model & Margin Collapsing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="main-header">
+    <div class="container">
+      <strong>Food Corner — Box Model Demo</strong>
+      <nav style="float:right;"><a href="index.html">Home</a></nav>
+      <div style="clear:both;"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1 class="section-title">CSS Box Model</h1>
+      <p>The food card below uses width, height, padding, border, margin, border-radius, box-shadow and box-sizing: border-box.</p>
+
+      <div style="margin:40px 0; background:#eee; padding:20px;">
+        <div class="food-card" style="margin:25px auto;">
+          <img src="images/pasta.svg" alt="Pasta">
+          <h3>Box Model Card</h3>
+          <p>Content → Padding → Border → Margin.</p>
+          <p class="price">Rs. 700</p>
+          <a class="btn" href="#">Order Now</a>
+        </div>
+      </div>
+
+      <h2>Margin Collapsing</h2>
+      <p>These two block elements have a bottom margin of 40px and a top margin of 30px. Their adjacent vertical margins collapse, so the resulting vertical gap is normally the larger margin (40px), not 70px.</p>
+
+      <div class="collapse-one">First block — margin-bottom: 40px</div>
+      <div class="collapse-two">Second block — margin-top: 30px</div>
+
+      <h2>Width, Height & Constraints</h2>
+      <div class="about-box">
+        This content box uses width, height-related constraints, min-width, max-width, min-height and max-height. Resize the browser to observe responsive behavior.
+      </div>
+
+      <br>
+      <a class="btn" href="index.html">Back to Food Corner</a>
+    </section>
+  </main>
+</body>
+</html>
